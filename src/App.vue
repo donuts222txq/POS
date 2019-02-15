@@ -1,13 +1,20 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <left-nav></left-nav>
+    <div class="main">
+      <router-view/>
+    </div>   
   </div>
 </template>
-
+<script>
+import leftNav from '@/components/leftNav.vue'
+export default {
+  name:"App",
+  component:{
+    leftNav
+  }
+}
+</script>
 <style lang="scss">
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -16,14 +23,11 @@
   text-align: center;
   color: #2c3e50;
 }
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.main{
+  float:left;
+  width:95%;
+  background-color:#eff2f7;
+  height:100%;
+  overflow:hidden;
 }
 </style>

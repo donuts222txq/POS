@@ -6,13 +6,14 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import axios from 'axios'
 
+
 Vue.use(ElementUI);
 Vue.prototype.$axios=axios;
 Vue.config.productionTip = false
 
 /*创建全局过滤器 */
 //年月日
-Vue.filters('date',(val)=>{
+Vue.filter('date',(val)=>{
   var date=new Date(val);
   var year=date.getFullYear();
   var month=date.getMonth()+1;
@@ -22,7 +23,7 @@ Vue.filters('date',(val)=>{
   return year+"-"+month+"-"+day;
 })
 //年月日+时分秒
-Vue.filters('datetime',(val)=>{
+Vue.filter('datetime',(val)=>{
   var date=new Date(val);
   var year=date.getFullYear();
   var month=date.getMonth()+1;
@@ -38,7 +39,7 @@ Vue.filters('datetime',(val)=>{
   return year+"-"+month+"-"+day+" "+hour+":"+minute+":"+second;
 })
 //价格
-Vue.filters('currency',(val)=>{
+Vue.filter('currency',(val)=>{
   return "￥"+val.toFixed(2)
 })
 
