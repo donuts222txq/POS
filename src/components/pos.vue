@@ -1,5 +1,5 @@
 <template>
-    <div class="pos">
+  <div class="pos">
     <el-row>
        <el-col :span='7' class="pos-order" id="order-list">
          <el-tabs>
@@ -14,7 +14,6 @@
                         <el-button type="text" size="small" @click="addOrderList(scope.row)">增加</el-button>
                       </template>
                  </el-table-column>
-
              </el-table>
              <div class="totalDiv">
               <small>数量</small> ：{{totalCount}} &nbsp;&nbsp;&nbsp;&nbsp;   <small>金额</small>：{{totalMoney}}元
@@ -23,15 +22,11 @@
                     <el-button type="warning">挂单</el-button>
                     <el-button type="danger" @click="delAllGoods()">删除</el-button>
                     <el-button type="success" @click="checkout()">结账</el-button>
-
                 </div>
            </el-tab-pane>
-
           <el-tab-pane label="挂单">挂单</el-tab-pane>
             <el-tab-pane label="外卖">外卖</el-tab-pane>
          </el-tabs>
-
-
        </el-col>
      <el-col :span="17">
           <div class="often-goods">
@@ -57,8 +52,6 @@
                 </ul>
               </div>
           </div>
-
-
           <div class="goods-type">
                 <el-tabs>
                     <el-tab-pane label="汉堡">
@@ -97,12 +90,11 @@
                                     <span class="foodName">{{goods.goodsName}}</span>
                                     <span class="foodPrice">{{goods.price}}</span>
                                 </li>
-
                             </ul>
                     </el-tab-pane>
                 </el-tabs>
           </div>
-     </el-col>
+      </el-col>
     </el-row>
   </div>
 </template>

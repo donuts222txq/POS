@@ -1,13 +1,15 @@
 <template>
   <div id="app">
-    <left-nav></left-nav>
+    <!--左侧导航-->
+    
+    <!--主体-->
     <div class="main">
       <router-view/>
     </div>   
   </div>
 </template>
 <script>
-import leftNav from '@/components/leftNav.vue'
+import leftNav from '@/components/leftNav.vue' 
 export default {
   name:"App",
   component:{

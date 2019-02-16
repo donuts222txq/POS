@@ -42,6 +42,7 @@ export default {
     margin:0px;
 }
 .left-nav li{
+    
     list-style:none;
     text-align:center;
     border-bottom:1px solid #20a0ff;
